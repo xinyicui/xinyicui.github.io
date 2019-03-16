@@ -1,0 +1,169 @@
+<!DOCTYPE html> 
+<html>
+
+
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+        <br>
+        <br>
+        <br>
+
+    <center>
+        <h1 style="font-family:'Press Start 2P';">An Electronic Piano Keyboard</h1>
+        <h2 style="font-family:'Press Start 2P';">HCDE 439 Final Project</h2>
+        <h2 style="font-family:'Press Start 2P';">Winter 2019 by Sunny Cui</h2>
+    </center>
+
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="100">
+
+        <div class="header">
+            <center>
+                <br>
+                <br>
+                <br>
+            <h2 style="font-family:'Press Start 2P';">Concept</h2>
+                </center>
+
+            <DIV>
+                For my Final Project, I decided to create a Piano Keyboard with Arduino, where I used push buttons as
+                inpout and a buzzer as output. The push buttons are acting as different keys in the keyboard, and the
+                buzzer produces the sound. The way that Arduino generates tones using Arduino is to use the tone()
+                function, from the "pitches.h" Library. The "pitches.h" Library contains all the pitch values for typ-
+                ical piano note, which allows the buzzer to produce different tones like a piano.
+            </DIV>
+                            <br>
+                <br>
+                <br>
+            <br>
+            <center>
+            <p>
+            <img src="Circuit.jpg" width=600></a>
+            </p>
+
+            <h2 style="font-family:'Press Start 2P';">Circuit</h2>
+</center>
+            <P ALIGN=LEFT>
+                <b>To build the circuit, I used:</b>
+            </>
+            <P ALIGN=LEFT>
+                Arduino UNO<br>
+                Push Buttons x 8<br>
+                A Buzzer<br>
+                Several Jumper Wires<br>
+
+                Breadboard or PCB boards(soldered together)<br>
+                <br>
+                In order to make a keyboard, I soldered each push button to a PCB board and use<br>
+                hook-up wires to connect them together. These materials are what I used to build<br>
+                the final prototype. <br>
+                <br>
+                <b>Optional:</b><br>
+                Solder(for soldering)<br>
+                Soldering Iron(for soldering)<br>
+                Hook-up Wires(for soldering)<br>
+                Glue Gun(to glue the PCB boards together and secure the circuit)<br>
+                Acrylic Plexiglass Sheet(for laser cutting)<br>
+                <br>
+                <DIV>
+            <b>Building the circuit: </b><br>
+                 First, connect the Buzzer i.e. its positive terminal to Pin 13 of Arduino. It is necessary to connect the Buzzer to one of the PWM capable pins of Arduino. The other end of the Buzzer is connected to GND.
+            <br>
+            <br>
+            Now, connect 7 Push Buttons to digital input/ouput pins 2 through 8 of Arduino. These pins act as the tone input pins. I have used the INTERNAL PULL UP(syntax: pinMode(button, INPUT_PULLUP);)feature of Arduino
+            and hence I haven’t connected any external pull-up resistors to these pins.
+            <br>
+            <br>
+            All the other terminals of these push buttons are connected to GND.
+            </DIV>
+                                <br>
+                <br>
+                <br>
+                                <br>
+
+
+
+            <center>
+            <p>
+                <h2 style="font-family:'Press Start 2P';">Schematic</h2>
+            <img src="Schematic.jpg" width=600></a>
+
+
+                </center>
+
+            <br>
+            <br>
+            <center>
+            <p>
+            <img src="Schematic2.jpg" width=600></a>
+            </p>
+            </center>
+            <DIV>
+            This is a simpler version of the schematic in which there are two types of schematics: the button schematic and the the buzzer schematic.
+                The entire schematic is built by 8 buttons and a buzzer.
+            </DIV>
+
+            <br>
+            <br>
+            <br>
+            <br>
+                        <center>
+            <p>
+                <h2 style="font-family:'Press Start 2P';">The Arduino Code</h2>
+                            </center>
+<DIV>The code for the project How to make Arduino based Piano is given below. The code
+                                below uses an extra file, pitches.h. This file contains all the pitch values for typical
+                                notes. For example, NOTE_C4 is middle C. NOTE_FS4 is F sharp, and so forth. This note
+                                table was originally written by Brett Hagman, on whose work the tone() command was based.
+
+    </DIV>
+
+                                        <br>
+            <br>
+            <center>
+            <img src="Code1.jpg" width=700></a>
+                            <img src="Code2.jpg" width=700></a>
+                            <img src="Code3.jpg" width=700></a>
+                            <img src="Code4.jpg" width=700></a>
+                        </center>
+            <br>
+            <br>
+            <br>
+            <br>
+
+                        <center>
+            <h2 style="font-family:'Press Start 2P';">Picture of the Final Prototype</h2>
+            <p>
+            <img src="Prototype.jpg" width=350>   <img src="Prototype2.jpg" width=350></a>
+            <p>
+                </center>
+<DIV>To make the prototype looks and acts more like a piano board, I soldered the buttons, buzzer and wires on 8 PCB boards. (Each PCB boards has a button or a buzzer on it) Then, I used glue gun to secure all components on the PCB board. To make each key “pressable”, I glued another PCB board on top of each PCB board to make a complete key. Finally, I used laser cutter to make the base board, and use glue gun to glue all the PCB boards on the acrylic base board.
+</DIV>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <center>
+                <h2 style="font-family:'Press Start 2P';">Video Demo</h2>
+                            <br>
+            <iframe width="600" height="339" src="https://www.youtube.com/embed/A_pmceDxWOI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>
+                The video above shows a demonstration of the final prototype.
+                <br>
+                Hope you enjoyed this project!
+            </p>
+                            <br>
+            <br>
+            <br>
+            <br>
+            </center>
+
+        </div>
+        
+    </body>
+</html>
